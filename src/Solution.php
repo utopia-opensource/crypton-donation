@@ -76,7 +76,7 @@
                     return "this Alias has already been used";
                 }
                 // check address used
-                $sqlQuery = "SELECT addr FROM addresses WHERE alias='" . $addressShort . "' LIMIT 1";
+                $sqlQuery = "SELECT alias FROM addresses WHERE addr='" . $address . "' LIMIT 1";
                 $result = $this->db->query2arr($sqlQuery);
                 if($result == []) {
                     // save addr & alias
