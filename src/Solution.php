@@ -94,7 +94,7 @@
                 return $this->addressDecode($addressShort);
             }
             // find alias for address
-            $sqlQuery = "SELECT addr FROM addresses WHERE alias='" . $address . "' LIMIT 1";
+            $sqlQuery = "SELECT addr FROM addresses WHERE alias='" . $addressShort . "' LIMIT 1";
             $result = $this->db->query2arr($sqlQuery);
             if($result == []) {
                 // alias not found
