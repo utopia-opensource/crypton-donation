@@ -7,7 +7,9 @@
   <body>
     <div class="uk-padding uk-text-lead uk-light">
       <div class="uk-text-center">
-        <img src="/img/logo.svg" style="width: 128px; height: 128px;" />
+        <a href="/">
+          <img src="/img/logo.svg" style="width: 128px;" />
+        </a>
         <div class="uk-container">
           <h2>
             <span uk-icon="icon: happy; ratio: 1.5" style="position: relative; bottom: 3px;"></span>
