@@ -13,15 +13,19 @@
         </div>
 
         <div class="uk-width-medium" style="margin: 15px auto;">
-          <form class="uk-form-large uk-padding-small" method="GET" action="GET">
+          <form class="uk-form-large uk-padding-small" style="height: initial;" method="GET" action="GET">
             <div class="uk-margin">
               <input class="uk-input uk-display-block" type="text" placeholder="Crypton address..." name="address" style="border-radius: 5px 5px 0 0;" />
               <button class="uk-button uk-button-primary uk-display-block uk-width-1-1 uk-text-center" style="border-radius: 0 0 5px 5px;">Create</button>
             </div>
+            <div class="uk-margin">
+              <h4>optional</h4>
+              <input class="uk-input uk-display-block" type="text" placeholder="alias" name="alias" style="border-radius: 5px 5px 0 0;" />
+              <small>beautiful name for an address</small>
+            </div>
           </form>
         </div>
 
-        <br/>
         <hr/>
         <?php include_once './include/crypton.php'; ?>
 
