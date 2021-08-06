@@ -75,11 +75,19 @@
                 if($this->db->checkRowExists($sqlQuery)) {
                     return "this Alias has already been used";
                 }
-                // save addr & alias
-                if(! $this->db->tryQuery("INSERT IGNORE INTO addresses SET alias='$alias',addr='$address'")) {
-                    return "failed to save address in db :(";
+                // check address used
+                $sqlQuery = "SELECT addr FROM addresses WHERE alias='" . $addressShort . "' LIMIT 1";
+                $result = $this->db->query2arr($sqlQuery);
+                if($result == []) {
+                    // save addr & alias
+                    if(! $this->db->tryQuery("INSERT IGNORE INTO addresses SET alias='$alias',addr='$address'")) {
+                        return "failed to save address in db :(";
+                    }
+                    $addressResult = $alias;
+                } else {
+                    // address used
+                    $addressResult = $result['alias'];
                 }
-                $addressResult = $alias;
             }
             return 'https://crypton.life/CRP/' . $addressResult;
         }
