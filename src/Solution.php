@@ -71,7 +71,7 @@
                     return "too big alias";
                 }
                 // check alias used
-                $sqlQuery = "SELECT addr FROM addresses WHERE alias='" . $address . "' LIMIT 1";
+                $sqlQuery = "SELECT addr FROM addresses WHERE alias='" . $alias . "' LIMIT 1";
                 if($this->db->checkRowExists($sqlQuery)) {
                     return "this Alias has already been used";
                 }
