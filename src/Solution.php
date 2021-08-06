@@ -49,7 +49,7 @@
             if($address == '') {
                 return $emptyErr;
             }
-            $addressResult = $this->addressEncode($addressResult);
+            $addressResult = $this->addressEncode($address);
             // check address length
             if(strlen($addressResult) > 64) {
                 return "too big address";
@@ -58,7 +58,7 @@
                 return "invalid address given";
             }
             // check alias
-            if(isset($_GET['alias'])) {
+            if(isset($_GET['alias']) && $_GET['alias'] != '') {
                 $alias = self::dataFilter($_GET['alias']);
                 if($alias == "") {
                     return "empty or invalid alias given";
