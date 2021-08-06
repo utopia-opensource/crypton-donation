@@ -50,6 +50,10 @@
                 return $emptyErr;
             }
             $addressResult = $this->addressEncode($addressResult);
+            // check address length
+            if(strlen($addressResult) > 64) {
+                return "too big address";
+            }
             if(! self::verifyHEXstr($address)) {
                 return "invalid address given";
             }
@@ -62,6 +66,9 @@
                 // check alias length
                 if(strlen($alias) < 3) {
                     return "alias minimum length is 3 characters";
+                }
+                if(strlen($alias) > 24) {
+                    return "too big alias";
                 }
                 // check alias used
                 $sqlQuery = "SELECT addr FROM addresses WHERE alias='" . $address . "' LIMIT 1";
