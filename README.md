@@ -15,5 +15,9 @@ You can use such a link in your blog, websites and forums, in your social channe
 ## install
 
 ```bash
+cp example.env .env
 composer install
 ```
+
+* & import db dump from `dump.sql`
+* specify db params in `.env`
