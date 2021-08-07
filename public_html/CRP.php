@@ -30,6 +30,51 @@
 
         <br/>
         <hr/>
+
+        <h4 class="uk-margin-small-top">Have not yet installed a wallet?</h4>
+        <p class="uk-text-small">Let's do it, it won't take long.<br/>Install the Utopia client with built-in Crypton wallet!</p>
+        <center>
+            <div class="uk-width-large">
+                <ul class="uk-list uk-text-left">
+                    <li>
+                        <span>1. Click on your operating system icon:</span>
+                        <div class="uk-text-center">
+                            <a href="https://update.u.is/downloads/macos/utopia-latest.dmg" class="icon-link">
+                                <img src="/img/icons/mac-client.png" width="48" />
+                            </a>
+                            <a href="https://u.is/en/download.html#win" target="_blank" class="icon-link">
+                                <img src="/img/icons/windows-client.png" width="48" />
+                            </a>
+                            <a href="https://u.is/en/download.html#linux" target="_blank" class="icon-link">
+                              <img src="/img/icons/linux-client.png" width="48" />
+                            </a>
+                        </div>
+                    </li>
+                    <li>2. Install the app</li>
+                    <li>3. Create your account, log in</li>
+                </ul>
+                <p class="uk-text-center uk-text-default">
+                    <span>Done! You are awesome!</span>
+                    <span uk-icon="icon: happy"></span>
+                </p>
+            </div>
+        </center>
+
+        <hr/>
+
+        <center>
+          <h4 class="uk-margin-small-top">Don’t have access to your PC now?</h4>
+          <div class="uk-margin-bottom">
+              <span>Not a problem.</span><br/>
+              <span>Save link to download later</span>
+          </div>
+
+          <script src="https://yastatic.net/share2/share.js"></script>
+          <div class="ya-share2" data-curtain data-size="l" data-services="facebook,telegram,twitter,whatsapp"></div>
+        </center>
+
+        <hr/>
+
         <?php include_once './include/crypton.php'; ?>
 
       </div>
